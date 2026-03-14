@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Fresher Resume Builder</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<h1>Fresher Resume Builder</h1>
+
+<div class="container">
+
+<!-- FORM SECTION -->
+
+<div class="form">
+
+<h2>Enter Your Details</h2>
+
+<input type="file" id="image">
+
+<input type="text" id="name" placeholder="Full Name">
+
+<input type="text" id="email" placeholder="Email">
+
+<input type="text" id="phone" placeholder="Phone Number">
+
+<textarea id="about" placeholder="About Me"></textarea>
+
+<textarea id="skills" placeholder="Skills (Example: HTML, Python, Excel)"></textarea>
+
+<textarea id="education" placeholder="Education"></textarea>
+
+<textarea id="projects" placeholder="Projects"></textarea>
+
+<textarea id="experience" placeholder="Experience (Internship or training)"></textarea>
+
+<button onclick="generateResume()">Generate Resume</button>
+
+</div>
+
+
+<!-- RESUME PREVIEW -->
+
+<div class="resume">
+
+<div class="left">
+
+<img id="profilePic" src="https://via.placeholder.com/120">
+
+<h2 id="rname"></h2>
+
+<p id="remail"></p>
+
+<p id="rphone"></p>
+
+</div>
+
+
+<div class="right">
+
+<h3>About Me</h3>
+<p id="rabout"></p>
+
+<h3>Skills</h3>
+<p id="rskills"></p>
+
+<h3>Education</h3>
+<p id="reducation"></p>
+
+<h3>Projects</h3>
+<p id="rprojects"></p>
+
+<h3>Experience</h3>
+<p id="rexperience"></p>
+
+</div>
+
+</div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
