@@ -1,64 +1,64 @@
 <!DOCTYPE html>
 <html>
 <head>
-
-<title>Fresher Resume Builder</title>
-
+<title>Resume Builder</title>
 <link rel="stylesheet" href="style.css">
-
 </head>
 
 <body>
 
-<h1>Fresher Resume Builder</h1>
+<h1>Resume Builder</h1>
 
 <div class="container">
-
-<!-- FORM SECTION -->
 
 <div class="form">
 
 <h2>Enter Your Details</h2>
 
-<input type="file" id="image">
-
 <input type="text" id="name" placeholder="Full Name">
-
-<input type="text" id="email" placeholder="Email">
-
-<input type="text" id="phone" placeholder="Phone Number">
+<input type="text" id="phone" placeholder="Mobile Number">
+<input type="email" id="email" placeholder="Email">
+<input type="text" id="address" placeholder="Address">
+<input type="text" id="education" placeholder="Education">
+<input type="text" id="linkedin" placeholder="LinkedIn Link">
+<input type="text" id="github" placeholder="GitHub Project Link">
 
 <textarea id="about" placeholder="About Me"></textarea>
-
-<textarea id="skills" placeholder="Skills (Example: HTML, Python, Excel)"></textarea>
-
-<textarea id="education" placeholder="Education"></textarea>
-
+<textarea id="skills" placeholder="Skills"></textarea>
+<textarea id="experience" placeholder="Experience"></textarea>
 <textarea id="projects" placeholder="Projects"></textarea>
 
-<textarea id="experience" placeholder="Experience (Internship or training)"></textarea>
+<label>Upload Profile Photo</label>
+<input type="file" id="image">
+
+<br><br>
 
 <button onclick="generateResume()">Generate Resume</button>
+<button onclick="downloadPDF()">Download Resume</button>
 
 </div>
 
 
-<!-- RESUME PREVIEW -->
-
-<div class="resume">
+<div class="resume" id="resume">
 
 <div class="left">
 
-<img id="profilePic" src="https://via.placeholder.com/120">
+<img id="profilePic">
 
 <h2 id="rname"></h2>
 
-<p id="remail"></p>
+<p><b>Phone:</b> <span id="rphone"></span></p>
+<p><b>Email:</b> <span id="remail"></span></p>
+<p><b>Address:</b> <span id="raddress"></span></p>
+<p><b>Education:</b> <span id="reducation"></span></p>
 
-<p id="rphone"></p>
+<p><b>LinkedIn:</b></p>
+<a id="rlinkedin" target="_blank"></a>
+
+<p><b>GitHub:</b></p>
+<a id="rgithub" target="_blank"></a>
 
 </div>
-
 
 <div class="right">
 
@@ -68,21 +68,19 @@
 <h3>Skills</h3>
 <p id="rskills"></p>
 
-<h3>Education</h3>
-<p id="reducation"></p>
+<h3>Experience</h3>
+<p id="rexperience"></p>
 
 <h3>Projects</h3>
 <p id="rprojects"></p>
 
-<h3>Experience</h3>
-<p id="rexperience"></p>
-
 </div>
 
 </div>
 
 </div>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
 <script src="script.js"></script>
 
 </body>
